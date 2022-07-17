@@ -16,6 +16,11 @@ Fraction::Fraction()
 
 void Fraction::affiche(std::ostream& flux) const
 {
+     if(m_denominateur == 0)
+    {
+        flux << "Le denominateur est egal a 0 donc Erreur" << endl;
+        exit(0);
+    }
     if(m_denominateur == 1)
     {
         flux << m_numerateur;
